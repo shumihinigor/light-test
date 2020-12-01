@@ -1,0 +1,130 @@
+body, html
+    background-color: $body-bg
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: $Regular
+    color: $white
+
+.main
+    background: linear-gradient(180deg, #353A40 0%, #16171B 100%)
+    border-radius: 60px
+    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.15))
+    width: 100%
+    min-width: 494px
+    max-width: 494px
+    &-head
+        position: relative
+        padding: 40px 40px
+        display: flex
+        align-items: center
+        justify-content: space-between          
+    &-body
+        position: relative
+        background: linear-gradient(180deg, #353A40 0%, #16171B 100%)
+        border-radius: 60px
+        height: 100%
+        padding: 32px 40px
+        display: flex
+        flex-direction: column
+        &::before
+            content: ''
+            position: absolute
+            top: 16px
+            left: 0
+            right: 0
+            margin: auto
+            width: 60px
+            height: 4px
+            background: #17181C
+            box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 28px
+        &__speed
+            position: relative
+            margin: 56px 0
+            text-align: center
+            &-range
+                & input[type="range"]
+                    width: 100%
+                    height: 6px
+        &__buttons
+            position: relative
+            text-align: center
+            margin-top: auto
+            padding: 0 11px 0 11px
+            & .button
+                & .back
+                    background: linear-gradient(318.21deg, #1D2328 14.05%, #131314 85.29%)
+                    box-shadow: 14px 14px 40px rgba(16, 16, 18, 0.75), -7px -7px 30px #262E32
+                & .front
+                    background: linear-gradient(320.66deg, #2F353A 14.75%, #1C1F22 84.81%)
+                    filter: blur(1px)
+                & input[type="checkbox"] 
+                    &:checked 
+                        & ~.back 
+                            box-shadow: 10px 15px 40px #000000, -10px -15px 40px #2F393D
+        &__cooling
+            margin-top: 66px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &-block
+                position: relative
+                width: 323px
+                height: 323px
+                display: flex
+                align-items: center
+                justify-content: center
+                background: linear-gradient(318.21deg, #202428 14.05%, #131314 85.29%)
+                box-shadow: 20px 20px 70px #141415, -20px -20px 70px #485057
+                border-radius: 1000px
+                overflow: hidden
+            &-range
+                position: absolute
+                top: 0
+                bottom: 0
+                right: 0
+                left: 0
+                padding: 12px
+                width: 100%
+                height: 100%
+                overflow: hidden
+                & .progress
+                    position: absolute
+                    z-index: 2
+                    top: 12px
+                    left: 12px
+                    & .move
+                        cursor: pointer
+                & .track
+                    position: absolute
+                    z-index: 1
+                    top: 12px
+                    right: 12px
+            &-value
+                position: relative
+                z-index: 3
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                font-family: $Black
+                font-weight: 900
+                font-size: 40px
+                line-height: 50px
+                letter-spacing: 0.01em
+                & .celsius
+                    display: flex
+                    align-items: flex-start
+                    padding-left: 5px
+                    &::before
+                        content: ''
+                        position: relative
+                        top: 8px
+                        width: 4px
+                        height: 4px
+                        border: 3px solid #FFFFFF
+                        border-radius: 50%
+                        
+

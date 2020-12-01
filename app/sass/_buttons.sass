@@ -1,0 +1,115 @@
+.button
+    position: relative
+    width: 63px
+    height: 63px
+    cursor: pointer
+    transition: all .2s
+    &.big
+        width: 80px
+        height: 80px
+        & div
+            border-radius: 100px
+        & .front
+            width: 75px
+            height: 75px
+    &:hover
+        & i 
+            &.user
+                @include inline($user-h)
+            &.burger
+                @include inline($burger-h)
+            &.on
+                @include inline($on-h)
+            &.auto
+                @include inline($auto-h)
+            &.dry
+                @include inline($dry-h)
+            &.cool
+                @include inline($cool-h)
+            &.program
+                @include inline($program-h)
+        & .front
+            background: linear-gradient(320.66deg, #2A87D3 14.75%, #1F66A4 45.12%, #113C67 84.81%)
+            filter: blur(1px)
+    & i
+        position: absolute
+        z-index: 1
+        bottom: 0
+        top: 0
+        left: 0
+        right: 0
+        margin: auto
+        background-position: center center
+        background-size: contain
+        background-repeat: no-repeat
+        &.burger
+            @include inline($burger)
+        &.user
+            @include inline($user)
+        &.on
+            @include inline($on)
+        &.auto
+            @include inline($auto)
+        &.dry
+            @include inline($dry)
+        &.cool
+            @include inline($cool)
+        &.program
+            @include inline($program)
+    & div
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        border-radius: 30px
+    & .back 
+        z-index: 0
+        border: none
+        display: block
+        height: 100%
+        width: 100%
+        background: linear-gradient(320.66deg, #2F353A 14.75%, #1C1F22 84.81%)
+        box-shadow: 7px 7px 30px #1F2427, -7px -7px 30px #485057
+        transition: all 0.3s ease-out
+        filter: blur(2px)
+    & .front
+        z-index: 1
+        margin: auto
+        width: 57px
+        height: 57px
+        background: linear-gradient(320.66deg, #2F353A 14.75%, #1C1F22 84.81%) 
+        transform: rotate(180deg)
+        filter: blur(4px)
+    & input[type="checkbox"] 
+        cursor: pointer
+        opacity: 0
+        position: relative
+        margin: 0
+        height: 100%
+        width: 100%
+        z-index: 2
+        &:checked 
+            & ~.back 
+                box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.5), -10px -15px 40px rgba(82, 89, 94, 0.5)
+                background: linear-gradient(320.66deg, #11A8FD 14.75%, #0081C9 84.81%)
+                filter: blur(1px)
+            & ~.front
+                filter: blur(1px)
+                background: linear-gradient(320.66deg, #016BB8 14.75%, #11A8FD 84.81%)
+            & ~i 
+                &.user
+                    @include inline($user-h)
+                &.burger
+                    @include inline($burger-h)
+                &.on
+                    @include inline($on-h)
+                &.auto
+                    @include inline($auto-h)
+                &.dry
+                    @include inline($dry-h)
+                &.cool
+                    @include inline($cool-h)
+                &.program
+                    @include inline($program-h)
+            
