@@ -1,4 +1,3 @@
-
 $('.single-slider').jRange({
     from: 1,
     to: 5,

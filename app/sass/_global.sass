@@ -13,6 +13,7 @@ body, html
     width: 100%
     min-width: 494px
     max-width: 494px
+    margin: 100px auto
     &-head
         position: relative
         padding: 40px 40px
@@ -79,7 +80,47 @@ body, html
                 background: linear-gradient(318.21deg, #202428 14.05%, #131314 85.29%)
                 box-shadow: 20px 20px 70px #141415, -20px -20px 70px #485057
                 border-radius: 1000px
+            &-sticks
+                position: absolute
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                top: -22px
+                left: -22px
+                width: calc(100% + 44px)
+                height: calc(100% + 44px)
+                transform: rotate(180deg)
                 overflow: hidden
+                & div
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    width: 1px
+                    height: 100%
+                    margin: auto
+                    & span
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        transform: rotate(45deg)
+                        &::before
+                            content: ''
+                            position: absolute
+                            display: block
+                            width: 3px
+                            height: 15px
+                            background: #0E9BEF
+                            border-radius: 20px
+                            box-shadow: 0px 0px 10px #0A8ADA
+                        &.disabled
+                            &::before
+                                background: #15171C
+                                box-shadow: -1px 1px 0 0 #535960
+                        
             &-range
                 position: absolute
                 top: 0
